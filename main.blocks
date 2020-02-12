@@ -1,0 +1,32 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="5-42R!$2cf+[G$K;wX8H">Player</variable><variable type="KIND_SpriteKind" id="iN.#,[XX5#Lcgtk:_Tp5">Projectile</variable><variable type="KIND_SpriteKind" id="_-)aC;uTM{I{R[HUesPj">Food</variable><variable type="KIND_SpriteKind" id="Phu{5G9eQNsbhd4[z.^W">Enemy</variable><variable id="l/RNa_rii6C8IYzR9!@^">weather_prediction</variable><variable id="I^V,/]T(oU,AX4c%Ul{C">weather_dude</variable><variable id="y3EO{fMnprQ({qVo;nbn">weather_effects</variable><variable id="=Al@IA`+.,q:XGWMBR$z">mySprite</variable></variables><block type="pxt-on-start" x="-270" y="-150"><comment id="undefined" pinned="true" h="538.3333435058594" w="872.5001220703125">//GOAL 1: create question: "What is your weather prediction?"
+
+
+//GOAL 2: return weather prediction question with a connected reply from the computer
+
+
+//GOAL 3: create a character that will be on the screen
+
+
+//GOAL 4: create random range of numbers that will reflect the random weather effects. HINT: scene effects
+
+
+//GOAL 5: create condition for the six different weather effects based on the random number.
+
+//CHALLENGE: You fill in the remaining weather_effects. You should have 5 other conditions</comment><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="l/RNa_rii6C8IYzR9!@^">weather_prediction</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="gameaskforstring"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="message"><shadow type="text"><field name="TEXT">What is your weather prediction?</field></shadow></value></block></value><next><block type="gameSplash"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="title"><shadow type="text"><field name="TEXT">It is going to be</field></shadow><block type="text_join"><mutation items="2"/><value name="ADD0"><shadow type="text"><field name="TEXT">It is going to: </field></shadow></value><value name="ADD1"><shadow type="text"><field name="TEXT">World</field></shadow><block type="variables_get"><field name="VAR" id="l/RNa_rii6C8IYzR9!@^">weather_prediction</field></block></value></block></value><next><block type="variables_set"><field name="VAR" id="I^V,/]T(oU,AX4c%Ul{C">weather_dude</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 5 5 5 5 . . . . . . 
+. . . . 5 5 e e e e 5 5 . . . . 
+. . . 5 5 e e e e e e 5 5 . . . 
+5 5 5 5 e e f e e f e e 5 5 5 5 
+. . . . e e e e e e e e . . . . 
+. . . . e e e e f e e e . . . . 
+. . . . e e f e e e f e . . . . 
+. . . . e e f f f f f e . . . . 
+. . . . e e e e e e e e . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="variables_set"><field name="VAR" id="y3EO{fMnprQ({qVo;nbn">weather_effects</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">6</field></shadow></value></block></value><next><block type="controls_if"><mutation elseif="5" else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get"><field name="VAR" id="y3EO{fMnprQ({qVo;nbn">weather_effects</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block></value><statement name="DO0"><block type="particlesStartScreenAnimation"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="effect">effects.confetti</field><next><block type="spritesay"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get"><field name="VAR" id="I^V,/]T(oU,AX4c%Ul{C">weather_dude</field></block></value><value name="text"><shadow type="text"><field name="TEXT">CONFETTI!!!!</field></shadow></value></block></next></block></statement></block></next></block></next></block></next></block></next></block></statement></block></xml>
